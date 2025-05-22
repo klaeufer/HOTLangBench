@@ -25,7 +25,7 @@ jobs:
       run: |
         echo Generate full output
         ./runall.sh > output.txt
-	echo Display output
-	cat output.txt
-	echo Show benchmark
+        echo Display output
+        cat output.txt
+        echo Show benchmark
         grep walltime output.txt
