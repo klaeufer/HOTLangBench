@@ -1,13 +1,8 @@
 csharp/bin
 csharp/obj
 
-go/day5
-
-haskell/day5
 haskell/*.hi
-haskell/*.o
 
-ocaml/day5
 ocaml/day5.cm?
 
 rust/Cargo.lock
@@ -18,6 +13,8 @@ scala/project/build.properties
 scala/project/project
 scala/project/target
 
+*/*.o
+*/day5
 */target
 
 *~

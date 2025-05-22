@@ -21,11 +21,12 @@ jobs:
       run: ./install-prereqs.sh
     - name: Build executables
       run: ./buildall.sh
-    - name: Generate small benchmarks for testing
+    - name: Dryrun benchmarks on small input to cache library dependencies
+      run: ./runall.sh
+    - name: Run benchmarks again on small input
       run: |
-        echo Generate full output
         ./runall.sh > output.txt
-        echo Display output
+        echo Display full output
         cat output.txt
-        echo Show benchmark
+        echo Show benchmarks
         grep walltime output.txt
