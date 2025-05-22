@@ -5,6 +5,8 @@ haskell/day5
 haskell/*.hi
 haskell/*.o
 
+rust/Cargo.lock
+
 scala/.bsp
 scala/.scala-build
 scala/project/build.properties
