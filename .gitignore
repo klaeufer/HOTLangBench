@@ -5,6 +5,9 @@ haskell/day5
 haskell/*.hi
 haskell/*.o
 
+ocaml/day5
+ocaml/day5.cm?
+
 rust/Cargo.lock
 
 scala/.bsp
