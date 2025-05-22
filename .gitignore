@@ -10,6 +10,7 @@ scala/.scala-build
 scala/project/build.properties
 scala/project/project
 scala/project/target
-scala/target
+
+*/target
 
 *~
