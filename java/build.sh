@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./day5
+mvn compile

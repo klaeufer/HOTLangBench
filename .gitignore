@@ -1,6 +1,8 @@
 csharp/bin
 csharp/obj
 
+go/day5
+
 haskell/day5
 haskell/*.hi
 haskell/*.o

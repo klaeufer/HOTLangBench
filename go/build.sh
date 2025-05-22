@@ -1,3 +1,2 @@
 #!/bin/bash
-
-./day5
+go build .
