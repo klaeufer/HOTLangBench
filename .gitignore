@@ -17,4 +17,5 @@ scala/project/target
 */day5
 */target
 
+*.log
 *~
