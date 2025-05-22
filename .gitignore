@@ -1,2 +1,15 @@
 csharp/bin
 csharp/obj
+
+haskell/day5
+haskell/*.hi
+haskell/*.o
+
+scala/.bsp
+scala/.scala-build
+scala/project/build.properties
+scala/project/project
+scala/project/target
+scala/target
+
+*~
