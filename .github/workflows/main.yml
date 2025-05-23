@@ -16,7 +16,7 @@ jobs:
     - uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
-        java-version: '24'
+        java-version: '24.0.1'
     - name: Install prerequisites
       run: ./install-prereqs.sh
     - name: Build executables
