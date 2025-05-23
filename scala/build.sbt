@@ -7,9 +7,8 @@ scalaVersion := "3.3.6"
 scalacOptions += "@.scalacOptions.txt"
 
 libraryDependencies ++= Seq(
-  "org.scalanlp" %% "breeze" % "2.1.0",
-  "org.scalatest" %% "scalatest"  % "3.2.17"  % Test,
-  "org.scalatestplus" %% "scalacheck-1-17" % "3.2.17.0" % "test"
+  "org.scalatest" %% "scalatest"  % "3.2.19"  % Test,
+  "org.scalatestplus" %% "scalacheck-1-17" % "3.2.18.0" % "test"
 )
 
 logBuffered := false
