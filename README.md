@@ -25,7 +25,6 @@ Other than the shootout and its forks, we have not found any broadly cross-langu
 
 There are some highly comprehensive benchmark suites specifically for the JVM, including https://renaissance.dev and https://www.dacapobench.org, as well as the http://mlton.org/Performance suite for Standard ML.
 
-
 In addition, there is the https://github.com/ParaGroup/StreamBenchmarks suite, which focuses on the technical domain of several prominent stream processing engines and libraries.
 
 These benchmark suites are potential sources of candidate algorithms for transliteration to a broader set of languages.
@@ -96,3 +95,11 @@ These steps are based on the [GitHub CI workflow](blob/main/.github/workflows/ma
 - Each benchmark runs only once. Because the benchmarks are coarse-grained and long-running, with substantially difference in running times across languages, this might not be a problem when focusing on major trends. Nevertheless, we are planning to make our process for generating the benchmarks more rigorous by using appropriate tools.
 - The algorithm(s) included so far are sequential.
 Therefore, they are only partially relevant for performance differences among these languages in real-world scenarios involving concurrent, parallel, or distributed algorithms and implementations.
+
+## Interpretation
+
+Ostensibly, the winner on the performance dimension is Rust, with Go being a close runner-up and Kotlin a not-so-distant but all the more surprising third.
+But whene considering factors beyond performance, such as productivity and portability (see also [this paper on P3](https://ieeexplore.ieee.org/document/9484790)), the picture evolves.
+
+- If we argue that Go has a lower learning curve than Rust, then taking a small performance hit in exchage for higher programmer productivity could be worth it.
+- If we additionally argue that Kotlin, as a JVM language, has superior portability, then it could be considered the overall winner with respect to P3.
