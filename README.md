@@ -6,6 +6,7 @@ There is currently only one benchmark, but it brings out substantial performance
 It is easy to add versions of this benchmark in other languages (see below).
 
 TODO: It should be relatively easy to add other benchmarks with a minor refactoring of the directory structure.
+Our overall goals include simplicity and agility.
 
 ## Motivation
 
