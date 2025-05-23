@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stack ghc day5.hs
+stack ghc -- -O2 day5.hs
