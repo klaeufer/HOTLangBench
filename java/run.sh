@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mvn exec:java -Dexec.mainClass=Day5
+java -cp target/classes Day5

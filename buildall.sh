@@ -4,7 +4,7 @@ LANGUAGES=$(find . -mindepth 1 -maxdepth 1 -type d ! -name '.*' ! -name data ! -
 
 echo Building examples in $LANGUAGES
 
-for d in */
+for d in $LANGUAGES
 do
 pushd $d
 ./build.sh

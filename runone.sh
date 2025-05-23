@@ -10,12 +10,14 @@ do
 
     pushd $d
 
+    echo -n "Starting at " ; date
     ts=$(date +%s%N)
 
     ./run.sh < $INPUT
 
     tt=$((($(date +%s%N) - $ts)/1000000))
     echo "walltime,$(basename $d),$tt,ms"
+    echo -n "Ending at " ; date
 
 popd
 done
