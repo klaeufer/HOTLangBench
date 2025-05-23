@@ -52,7 +52,7 @@ https://adventofcode.com/2023/day/5
 
 ### Preliminary results
 
-We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core processors.
+We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core processors and 1.5 TB of RAM.
 
 
 | Language | Walltime (hh:mm:ss) |
@@ -68,3 +68,14 @@ We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core process
 | java     | 03:46:34            |
 
 ![Execution Time Chart](doc/images/aoc23d5.png)
+
+### Reproducing the benchmarks
+
+These steps are based on the [GitHub CI workflow](blob/main/.github/workflows/main.yml).
+
+- Use a suitable compute node running Ubuntu or similar Debian-based distribution.
+- If you have root access, you should be able to run `scripts/install-prereqs.sh`
+- Otherwise you can use Homebrew to install equivalent prerequisites (we are working on an alternative script for this).
+- To build the executables, run `scripts/buildall.sh`.
+- As a sanity check, run `scripts/runall.sh`.
+- Then run the full benchmarks via `scripts/benchmark.sh`; we recommend doing this in a tmux session that you can reattach to if necessary.
