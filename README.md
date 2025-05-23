@@ -38,7 +38,7 @@ I then manually transliterated the Scala version to Rust, Java, C#, and Kotlin.
 
 Recently, I used Anthropic Claude to transliterate the Scala version to C++, Go, Haskell, and OCaml, thereby covering most mainstream HOT languages.
 
-Help with the following missing languages is welcome:
+Help with missing languages is welcome, especially:
 
 - TypeScript
 - Swift
