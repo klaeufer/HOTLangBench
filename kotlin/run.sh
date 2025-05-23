@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mvn exec:java -Dexec.mainClass=Day5k
+java -jar target/aoc2023-0.1-SNAPSHOT-jar-with-dependencies.jar
