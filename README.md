@@ -107,3 +107,5 @@ But whene considering factors beyond performance, such as productivity and porta
 It should be relatively easy to add other benchmarks with a minor refactoring of the directory structure.
 
 We also plan to address the limitations listed above.
+
+Furthermore, we should include other performance metrics, especially heap memory usage.
