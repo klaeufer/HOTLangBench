@@ -1,3 +1,3 @@
 #!/bin/bash
 
-java -cp target/classes Day5
+java -cp target/aoc2023-0.1-SNAPSHOT.jar Day5
