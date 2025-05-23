@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install -q -y ghc ocaml cargo-1.80
+sudo apt install -q -y ghc ocaml
 
 curl -s "https://get.sdkman.io" | bash
 
