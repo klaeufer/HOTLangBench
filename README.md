@@ -77,10 +77,10 @@ We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core process
 | Language | Walltime (hh:mm:ss) |
 |----------|---------------------|
 | rust     | 00:02:37            |
+| cpp      | 00:03:15            |
 | go       | 00:03:26            |
 | kotlin   | 00:11:00            |
 | csharp   | 01:09:20            |
-| cpp      | 02:12:03            |
 | scala    | 02:13:01            |
 | ocaml    | 02:17:50            |
 | haskell  | 02:48:01            |
@@ -107,10 +107,10 @@ Therefore, they are only partially relevant for performance differences among th
 
 ## Interpretation
 
-Ostensibly, the winner on the performance dimension is Rust, with Go being a close runner-up and Kotlin a not-so-distant but all the more surprising third.
+Ostensibly, the winners on the performance dimension are  Rust and C++, with Go being a closethird and Kotlin a not-so-distant but all the more surprising fourth.
 But whene considering factors beyond performance, such as productivity and portability (see also [this paper on P3](https://ieeexplore.ieee.org/document/9484790)), the picture evolves.
 
-- If we argue that Go has a lower learning curve than Rust, then taking a small performance hit in exchage for higher programmer productivity could be worth it.
+- If we argue that Go has a lower learning curve than Rust or C++, then taking a small performance hit in exchage for higher programmer productivity could be worth it.
 - If we additionally argue that Kotlin, as a JVM language, has superior portability, then it could be considered the overall winner with respect to P3.
 
 ## Future work
