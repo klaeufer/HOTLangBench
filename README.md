@@ -51,6 +51,7 @@ Currently, the following languages are supported:
 - OCaml
 - Rust
 - Scala 3
+- Swift
 
 I wrote the Scala version first, using function composition and other higher-order constructs to build a pipeline of transformations, along with a brute-force iteration that is computationally expensive for large seed ranges.
 
