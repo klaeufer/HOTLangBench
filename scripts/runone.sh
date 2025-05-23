@@ -14,7 +14,7 @@ do
     echo "===== Running benchmark in $d ====="
     echo -n "Starting at " ; date
 
-    /usr/bin/time -f "$(basename $d),%C,%E,%S,%U,%P,%M,%t,%K,%D,%p,%X,%Z,%I,%O,%r,%s,%k,%W,%c,%w,%R,%x" ./run.sh < $INPUT 2> >(tee -a ../timing-results.csv >&2)
+    /usr/bin/time -f "$(basename $d),%C,%E,%S,%U,%P,%M,%t,%K,%D,%p,%X,%Z,%I,%O,%r,%s,%k,%W,%c,%w,%R,%x" ./run.sh < $INPUT 2> >(grep /run | tee -a ../timing-results.csv >&2)
     
     echo -n "Ending at " ; date
 popd
