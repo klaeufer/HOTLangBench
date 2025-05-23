@@ -15,6 +15,7 @@ scala/project/target
 
 */*.o
 */day5
+*/Day5
 */target
 
 *.log
