@@ -1,3 +1,4 @@
 #!/bin/bash
 
-g++ -o day5 day5.cpp
+g++ -std=c++20 -O3 -DNDEBUG -march=native day5.cpp -o day5
+

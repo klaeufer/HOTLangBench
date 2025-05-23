@@ -1,3 +1,3 @@
 #!/bin/bash
 
-swiftc Day5.swift
+swiftc -O Day5.swift
