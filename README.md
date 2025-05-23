@@ -52,8 +52,8 @@ Recently, I used Anthropic Claude to transliterate the Scala version to C++, Go,
 
 Help with missing languages is welcome, especially:
 
-- TypeScript
 - Swift
+- TypeScript
 
 ## Benchmarks
 
