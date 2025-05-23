@@ -95,4 +95,4 @@ These steps are based on the [GitHub CI workflow](blob/main/.github/workflows/ma
 ### Limitations
 
 The algorithm(s) included so far are sequential.
-Therefore, they are only partially relevant for the performance differences among these languages in real-world scenarios involving concurrent, parallel, or distributed algorithms and implementations.
+Therefore, they are only partially relevant for performance differences among these languages in real-world scenarios involving concurrent, parallel, or distributed algorithms and implementations.
