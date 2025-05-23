@@ -8,5 +8,5 @@ echo Running examples in $LANGUAGES on input $INPUT - this will take various hou
 for d in $LANGUAGES
 do
     LANG=$(basename $d)
-    ./runone.sh $INPUT $LANG > day5-$LANG.log &
+    ./scripts/runone.sh $INPUT $LANG > day5-$LANG.log &
 done
