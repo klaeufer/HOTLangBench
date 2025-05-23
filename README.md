@@ -19,6 +19,17 @@ Because I was also getting interested in Rust, I transliterated my code as close
 As a first step toward understanding the root causes for these major differences, I decided to transliterate the code to various other languages and platforms and compare their relative performance in a coarse-grained manner.
 For reproducibility, compared to the complex and Python 2-based scripts included in the shootout, I created my own, very simple shell scripts.
 
+## Related work
+
+Other than the shootout and its forks, we have not found any broadly cross-language benchmarks.
+
+There are some highly comprehensive benchmark suites specifically for the JVM, including https://renaissance.dev and https://www.dacapobench.org, as well as the http://mlton.org/Performance suite for Standard ML.
+
+
+In addition, there is the https://github.com/ParaGroup/StreamBenchmarks suite, which focuses on the technical domain of several prominent stream processing engines and libraries.
+
+These benchmark suites are potential sources of candidate algorithms for transliteration to a broader set of languages.
+
 ## Languages
 
 Currently, the following languages are supported:
