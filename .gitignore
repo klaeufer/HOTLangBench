@@ -21,3 +21,4 @@ scala/project/target
 *.pdf
 *.log
 *~
+\#*\#
