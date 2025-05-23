@@ -45,8 +45,26 @@ Help with missing languages is welcome, especially:
 
 ## Benchmarks
 
-There is currently only one benchmark, the seed-fertilizer mapping puzzle from day 5 of the 2023 Advent of Code.
+There is currently only one algorithm being benchmarked across the various languages: the seed-fertilizer mapping puzzle from day 5 of the 2023 Advent of Code.
 
 https://adventofcode.com/2023/day/5
 
-*Actual results for the full input are pending. Now that I've finally learned some basic tmux techniques, I plan to post them here as soon as they are available.*
+
+### Preliminary results
+
+We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core processors.
+
+
+| Language | Walltime (hh:mm:ss) |
+|----------|---------------------|
+| rust     | 00:02:37            |
+| go       | 00:03:26            |
+| kotlin   | 00:11:00            |
+| csharp   | 01:09:20            |
+| cpp      | 02:12:03            |
+| scala    | 02:13:01            |
+| ocaml    | 02:17:50            |
+| haskell  | 02:48:01            |
+| java     | 03:46:34            |
+
+![Execution Time Chart](doc/images/aoc23d5.png)
