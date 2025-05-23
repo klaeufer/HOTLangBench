@@ -1,5 +1,15 @@
 # HOTLangBench (WiP)
 
+[github.com/klaeufer/HOTLangBench](https://github.com/klaeufer/HOTLangBench)
+
+Konstantin Läufer\
+Department of Computer Science\
+Loyola University Chicago
+
+May 2025
+
+## Abstract
+
 This work in progress aims to compare various HOT (higher-order and statically typed, a term coined by Phil Wadler) through *reproducible* course-grained, wall-time benchmarks.
 Our overall goals include simplicity, agility, and reproducibility.
 
