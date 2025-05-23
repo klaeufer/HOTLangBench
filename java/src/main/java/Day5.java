@@ -85,19 +85,18 @@ public class Day5 {
     System.err.println(String.format("part1: %d", part1));
 
     //  https://cr.openjdk.org/~vklang/gatherers/api/java.base/java/util/stream/Gatherers.html
-    final var part2 = seeds
-        .stream()
-        .gather(Gatherers.windowFixed(2))
-        .map(p -> {
-          final var head = p.getFirst();
+    final var part2 = IntStream.range(0, seeds.size() / 2)
+        .mapToObj(i -> List.of(seeds.get(i * 2), seeds.get(i * 2 + 1)))
+        .mapToLong(p -> {
+          final var head = p.get(0);
           return LongStream
-              .range(head, head + p.getLast())
-              .map(seedToLocation::apply)
-              .min()
-              .getAsLong();
+            .range(head, head + p.get(1))
+            .map(seedToLocation::apply)
+            .min()
+            .getAsLong();
         })
-        .min(Long::compare)
-        .get();
+        .min()
+        .orElseThrow();
 
     System.err.println(String.format("part2: %d", part2));
     return new Result(part1, part2);
