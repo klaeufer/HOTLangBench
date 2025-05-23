@@ -79,6 +79,7 @@ We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core process
 | rust     | 00:02:37            |
 | cpp      | 00:03:15            |
 | go       | 00:03:26            |
+| swift    | 00:05:17            |
 | kotlin   | 00:11:00            |
 | csharp   | 01:09:20            |
 | scala    | 02:13:01            |
@@ -87,6 +88,8 @@ We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core process
 | java     | 03:46:34            |
 
 ![Execution Time Chart](doc/images/aoc23d5.png)
+
+We're currently reviewing the bottom five results to make sure we've enabled the typical optimizations.
 
 ### Reproducing the benchmarks
 
