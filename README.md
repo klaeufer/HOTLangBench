@@ -61,7 +61,6 @@ There is currently only one algorithm being benchmarked across the various langu
 
 https://adventofcode.com/2023/day/5
 
-
 ### Preliminary results
 
 We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core processors and 1.5 TB of RAM.
@@ -94,5 +93,6 @@ These steps are based on the [GitHub CI workflow](blob/main/.github/workflows/ma
 
 ### Limitations
 
-The algorithm(s) included so far are sequential.
+- Each benchmark runs only once. Because the benchmarks are coarse-grained and long-running, with substantially difference in running times across languages, this might not be a problem when focusing on major trends. Nevertheless, we are planning to make our process for generating the benchmarks more rigorous by using appropriate tools.
+- The algorithm(s) included so far are sequential.
 Therefore, they are only partially relevant for performance differences among these languages in real-world scenarios involving concurrent, parallel, or distributed algorithms and implementations.
