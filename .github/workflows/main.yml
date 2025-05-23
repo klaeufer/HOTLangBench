@@ -18,14 +18,14 @@ jobs:
         distribution: 'temurin'
         java-version: '24.0.1'
     - name: Install prerequisites
-      run: ./install-prereqs.sh
+      run: ./scripts/install-prereqs.sh
     - name: Build executables
-      run: ./buildall.sh
+      run: ./scripts/buildall.sh
     - name: Dryrun benchmarks on small input to cache library dependencies
-      run: ./runall.sh
+      run: ./scripts/runall.sh
     - name: Run benchmarks again on small input
       run: |
-        ./runall.sh > output.txt
+        ./scripts/runall.sh > output.txt
         echo Display full output
         cat output.txt
         echo Show benchmarks

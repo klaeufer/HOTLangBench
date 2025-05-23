@@ -19,6 +19,17 @@ Because I was also getting interested in Rust, I transliterated my code as close
 As a first step toward understanding the root causes for these major differences, I decided to transliterate the code to various other languages and platforms and compare their relative performance in a coarse-grained manner.
 For reproducibility, compared to the complex and Python 2-based scripts included in the shootout, I created my own, very simple shell scripts.
 
+## Related work
+
+Other than the shootout and its forks, we have not found any broadly cross-language benchmarks.
+
+There are some highly comprehensive benchmark suites specifically for the JVM, including https://renaissance.dev and https://www.dacapobench.org, as well as the http://mlton.org/Performance suite for Standard ML.
+
+
+In addition, there is the https://github.com/ParaGroup/StreamBenchmarks suite, which focuses on the technical domain of several prominent stream processing engines and libraries.
+
+These benchmark suites are potential sources of candidate algorithms for transliteration to a broader set of languages.
+
 ## Languages
 
 Currently, the following languages are supported:
@@ -30,6 +41,7 @@ Currently, the following languages are supported:
 - Kotlin
 - Modern Java (24)
 - OCaml
+- Rust
 - Scala 3
 
 I wrote the Scala version first, using function composition and other higher-order constructs to build a pipeline of transformations, along with a brute-force iteration that is computationally expensive for large seed ranges.
@@ -45,8 +57,42 @@ Help with missing languages is welcome, especially:
 
 ## Benchmarks
 
-There is currently only one benchmark, the seed-fertilizer mapping puzzle from day 5 of the 2023 Advent of Code.
+There is currently only one algorithm being benchmarked across the various languages: the seed-fertilizer mapping puzzle from day 5 of the 2023 Advent of Code.
 
 https://adventofcode.com/2023/day/5
 
-*Actual results for the full input are pending. Now that I've finally learned some basic tmux techniques, I plan to post them here as soon as they are available.*
+
+### Preliminary results
+
+We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core processors and 1.5 TB of RAM.
+
+
+| Language | Walltime (hh:mm:ss) |
+|----------|---------------------|
+| rust     | 00:02:37            |
+| go       | 00:03:26            |
+| kotlin   | 00:11:00            |
+| csharp   | 01:09:20            |
+| cpp      | 02:12:03            |
+| scala    | 02:13:01            |
+| ocaml    | 02:17:50            |
+| haskell  | 02:48:01            |
+| java     | 03:46:34            |
+
+![Execution Time Chart](doc/images/aoc23d5.png)
+
+### Reproducing the benchmarks
+
+These steps are based on the [GitHub CI workflow](blob/main/.github/workflows/main.yml).
+
+- Use a suitable compute node running Ubuntu or similar Debian-based distribution.
+- If you have root access, you should be able to run `scripts/install-prereqs.sh`
+- Otherwise you can use Homebrew to install equivalent prerequisites (we are working on an alternative script for this).
+- To build the executables, run `scripts/buildall.sh`.
+- As a sanity check, run `scripts/runall.sh`.
+- Then run the full benchmarks via `scripts/benchmark.sh`; we recommend doing this in a tmux session that you can reattach to if necessary.
+
+### Limitations
+
+The algorithm(s) included so far are sequential.
+Therefore, they are only partially relevant for performance differences among these languages in real-world scenarios involving concurrent, parallel, or distributed algorithms and implementations.
