@@ -6,7 +6,8 @@ echo Building examples in $LANGUAGES
 
 for d in $LANGUAGES
 do
-pushd $d
-./build.sh
-popd
+    echo "===== Building benchmark in $d ====="
+    pushd $d
+    ./build.sh
+    popd
 done

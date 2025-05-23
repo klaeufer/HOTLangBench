@@ -10,6 +10,7 @@ do
 
     pushd $d
 
+    echo "===== Running benchmark in $d ====="
     echo -n "Starting at " ; date
     ts=$(date +%s%N)
 
