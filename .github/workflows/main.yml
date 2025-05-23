@@ -13,11 +13,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.5'
     - uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
         java-version: '24.0.1'
-    - name: Install prerequisites
+    - uses: actions/setup-swift@v2
+    - uses: actions/setup-go@v5
+    - name: Install remaining prerequisites
       run: ./scripts/install-prereqs.sh
     - name: Build executables
       run: ./scripts/buildall.sh

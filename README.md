@@ -1,12 +1,10 @@
 # HOTLangBench (WiP)
 
 This work in progress aims to compare various HOT (higher-order and statically typed, a term coined by Phil Wadler) through *reproducible* course-grained, wall-time benchmarks.
+Our overall goals include simplicity, agility, and reproducibility.
 
 There is currently only one benchmark, but it brings out substantial performance differences among the various languages and platforms. 
 It is easy to add versions of this benchmark in other languages (see below).
-
-TODO: It should be relatively easy to add other benchmarks with a minor refactoring of the directory structure.
-Our overall goals include simplicity and agility.
 
 ## Motivation
 
@@ -48,12 +46,12 @@ I wrote the Scala version first, using function composition and other higher-ord
 
 I then manually transliterated the Scala version to Rust, Java, C#, and Kotlin.
 
-Recently, I used Anthropic Claude to transliterate the Scala version to C++, Go, Haskell, and OCaml, thereby covering most mainstream HOT languages.
+Recently, I used Anthropic Claude to transliterate the Scala version to C++, Go, Haskell, OCaml, and Swift, thereby covering most mainstream HOT languages.
 
-Help with missing languages is welcome, especially:
+Help with missing languages is welcome, including:
 
-- Swift
 - TypeScript
+- ...
 
 ## Benchmarks
 
@@ -64,7 +62,6 @@ https://adventofcode.com/2023/day/5
 ### Preliminary results
 
 We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core processors and 1.5 TB of RAM.
-
 
 | Language | Walltime (hh:mm:ss) |
 |----------|---------------------|
@@ -104,3 +101,9 @@ But whene considering factors beyond performance, such as productivity and porta
 
 - If we argue that Go has a lower learning curve than Rust, then taking a small performance hit in exchage for higher programmer productivity could be worth it.
 - If we additionally argue that Kotlin, as a JVM language, has superior portability, then it could be considered the overall winner with respect to P3.
+
+## Future work
+
+It should be relatively easy to add other benchmarks with a minor refactoring of the directory structure.
+
+We also plan to address the limitations listed above.
