@@ -90,3 +90,8 @@ These steps are based on the [GitHub CI workflow](blob/main/.github/workflows/ma
 - To build the executables, run `scripts/buildall.sh`.
 - As a sanity check, run `scripts/runall.sh`.
 - Then run the full benchmarks via `scripts/benchmark.sh`; we recommend doing this in a tmux session that you can reattach to if necessary.
+
+### Limitations
+
+The algorithm(s) included so far are sequential.
+Therefore, they are only partially relevant for the relative performance of the covered languages in real-world scenarios involving concurrent, parallel, or distributed algorithms and their implementations.
