@@ -31,8 +31,8 @@ jobs:
       run: ./scripts/runall.sh
     - name: Run benchmarks again on small input
       run: |
-        ./scripts/runall.sh > output.txt
-        echo Display full output
-        cat output.txt
-        echo Show benchmarks
-        grep walltime output.txt
+        ./scripts/runall.sh
+        echo ===========================
+        echo ===== Show benchmarks =====
+        echo ===========================
+        cat timing-results.csv
