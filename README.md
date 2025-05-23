@@ -113,7 +113,7 @@ Therefore, they are only partially relevant for performance differences among th
 Ostensibly, the winners on the performance dimension are  Rust and C++, with Go and Swift being a close third and fourth, respectively, and Kotlin a not-so-distant but all the more surprising fifth.
 But when considering factors beyond performance, such as productivity and portability (see also [this paper on P3](https://ieeexplore.ieee.org/document/9484790)), the picture evolves.
 
-- If we argue that Go has a lower learning curve than Rust or C++, then taking a small performance hit in exchage for higher programmer productivity could be worth it.
+- If we argue that Go and Swift have lower learning curves than Rust or C++, then taking a small performance hit in exchage for higher programmer productivity could be worth it.
 - If we additionally argue that Kotlin, as a JVM language, has superior portability, then it could be considered the overall winner with respect to P3.
 
 ## Future work
