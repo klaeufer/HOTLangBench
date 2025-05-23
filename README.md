@@ -12,7 +12,7 @@ TODO: It should be relatively easy to add other benchmarks with a minor refactor
 As a lifelong student of programming languages, especially HOT ones, I have been intrigued by the [Computer Language Benchmarks Game](https://benchmarksgame-team.pages.debian.net/benchmarksgame), a.k.a. the shootout.
 Nevertheless, the shootout seems to focus mostly on computational physics problems with few opportunities to use higher-order programming techniques.
 
-Meanwhile, I also started to work on some [Advent of Code](https://adventofcode.com) challenges to stay current on my coding skills.
+Meanwhile, I started to work on some [Advent of Code](https://adventofcode.com) challenges to stay current on my coding skills.
 When I worked on [this puzzle](https://adventofcode.com/2023/day/5), I noticed that my Scala version hadn't finished after several hours; because I didn't want my laptop to overheat, I ran it on a fast compute node, where it took about three hours. 
 Because I was also getting interested in Rust, I transliterated my code as closely as possible, and the resulting Rust code ran in about three minutes.
 
