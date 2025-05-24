@@ -35,4 +35,4 @@ jobs:
         echo ===========================
         echo ===== Show benchmarks =====
         echo ===========================
-        cat timing-results.csv
+        cat dryrun-results.csv
