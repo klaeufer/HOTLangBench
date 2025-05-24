@@ -26,9 +26,7 @@ jobs:
       run: ./scripts/install-prereqs.sh
     - name: Build executables
       run: ./scripts/buildall.sh
-    - name: Dryrun benchmarks on small input to cache library dependencies
-      run: ./scripts/runall.sh
-    - name: Run benchmarks again on small input
+    - name: Run benchmarks on small input
       run: |
         ./scripts/runall.sh
         echo ===========================
