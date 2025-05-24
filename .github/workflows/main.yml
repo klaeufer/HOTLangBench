@@ -19,7 +19,7 @@ jobs:
     - uses: actions/setup-java@v4
       with:
         distribution: 'corretto'
-        java-version: '24.0.1'
+        java-version: '24'
     - uses: actions/setup-go@v5
     - name: Install remaining prerequisites
       run: ./scripts/install-prereqs.sh
