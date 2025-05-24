@@ -80,11 +80,11 @@ We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core process
 | cpp      | 00:03:15            |
 | go       | 00:03:26            |
 | swift    | 00:05:17            |
-| kotlin   | 00:11:00            |
-| csharp   | 01:09:20            |
+| kotlin   | 00:10:53            |
+| haskell  | 00:28:44            |
+| csharp   | 00:34:48            |
 | scala    | 02:13:01            |
 | ocaml    | 02:17:50            |
-| haskell  | 02:48:01            |
 | java     | 03:46:34            |
 
 ![Execution Time Chart](doc/images/aoc23d5.png)
