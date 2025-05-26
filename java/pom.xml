@@ -14,8 +14,8 @@
   <url>https://github.com/klaeufer/aoc2023-java</url>
 
   <properties>
-    <maven.compiler.source>23</maven.compiler.source>
-    <maven.compiler.target>23</maven.compiler.target>
+    <maven.compiler.source>24</maven.compiler.source>
+    <maven.compiler.target>24</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <main.class>Day5</main.class>
   </properties>
@@ -45,15 +45,11 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.14.0</version>
           <configuration>
-            <release>23</release>
-	    <enablePreview>true</enablePreview>
+            <release>24</release>
           </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
-	  <configuration>
-            <argLine>--enable-preview</argLine>
-	  </configuration>
 	  <version>3.5.3</version>
         </plugin>
         <plugin>
