@@ -10,8 +10,9 @@ public class Day5 {
 
   public static void main(String[] args) throws Throwable {
     final var input = new BufferedReader(new InputStreamReader(System.in))
-      .lines()
-      .iterator();
+        .lines()
+        .iterator();
+
     final var result = process(input);
 
     System.out.println(result.part1); // 174137457
@@ -58,8 +59,8 @@ public class Day5 {
     return Optional.of(i ->
         ranges
             .stream()
-//            .filter(r -> r.start <= i && i < r.start + r.length)
-            .filter(r -> LongStream.range(r.start, r.start + r.length).anyMatch(j -> j == i)) // more performant?
+            .filter(r -> r.start <= i && i < r.start + r.length)
+            // .filter(r -> LongStream.range(r.start, r.start + r.length).anyMatch(j -> j == i)) // more performant?
             .findFirst()
             .map(r -> r.base + i - r.start)
             .orElse(i)
@@ -91,7 +92,7 @@ public class Day5 {
         .map(p -> {
           final var head = p.getFirst();
           return LongStream
-              .range(head, head + p.getLast())
+              .iterate(head, i -> i < head + p.getLast(), i -> i + 1)
               .map(seedToLocation::apply)
               .min()
               .getAsLong();
