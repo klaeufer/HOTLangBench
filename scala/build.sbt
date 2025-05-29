@@ -2,7 +2,7 @@ name := "day5"
 
 version := "0.1"
 
-scalaVersion := "3.3.6"
+scalaVersion := "3.7.0"
 
 scalacOptions += "@.scalacOptions.txt"
 
