@@ -82,7 +82,7 @@ public class Day5
 
         Console.Error.WriteLine("seeds read: " + string.Join(" ", seeds));
 
-        IEnumerable<Func<long, long>> makeMaps() {
+        IEnumerable<Func<long, long>> MakeMaps() {
             while (true) {
                 var map = MakeMap(input);
                 if (map == null) break;
@@ -90,7 +90,7 @@ public class Day5
             }
         }
 
-        var seedToLocation = makeMaps().Aggregate((f, g) => s => g(f(s)));
+        var seedToLocation = MakeMaps().Aggregate((f, g) => s => g(f(s)));
 
         var part1 = seeds
             .Select(seedToLocation)
