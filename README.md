@@ -76,20 +76,20 @@ We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core process
 
 | Language | Walltime (hh:mm:ss) |
 |----------|---------------------|
-| rust     | 00:02:37            |
-| cpp      | 00:03:15            |
-| go       | 00:03:26            |
-| swift    | 00:05:17            |
-| kotlin   | 00:10:53            |
-| haskell  | 00:28:44            |
-| csharp   | 00:34:48            |
-| scala    | 02:13:01            |
-| ocaml    | 02:17:50            |
-| java     | 03:46:34            |
+| rust     | 0:02:31   |
+| cpp      | 0:03:15   |
+| go       | 0:03:26   |
+| swift    | 0:05:18   |
+| kotlin   | 0:11:03   |
+| scala    | 0:13:00   |
+| haskell  | 0:28:13   |
+| java     | 0:28:14   |
+| csharp   | 0:35:15  [*] |
+| ocaml    | 2:17:50  [*] |
 
 ![Execution Time Chart](doc/images/aoc23d5.png)
 
-We're currently reviewing the bottom five results to make sure we've enabled the typical optimizations.
+[*] We're currently reviewing the C# and OCaml versions to make sure we've used the language and library correctly and efficiently. Meanwhile these results should be considered preliminary/unconfirmed.
 
 ### Reproducing the benchmarks
 
@@ -110,11 +110,11 @@ Therefore, they are only partially relevant for performance differences among th
 
 ## Interpretation
 
-Ostensibly, the winners on the performance dimension are  Rust and C++, with Go and Swift being a close third and fourth, respectively, and Kotlin a not-so-distant but all the more surprising fifth.
+Ostensibly, the winners on the performance dimension are  Rust and C++, with Go and Swift being a close third and fourth, respectively, and Kotlin and Scala  not-so-distant but all the more surprising fifth and sixth.
 But when considering factors beyond performance, such as productivity and portability (see also [this paper on P3](https://ieeexplore.ieee.org/document/9484790)), the picture evolves.
 
 - If we argue that Go and Swift have lower learning curves than Rust or C++, then taking a small performance hit in exchage for higher programmer productivity could be worth it.
-- If we additionally argue that Kotlin, as a JVM language, has superior portability, then it could be considered the overall winner with respect to P3.
+- If we additionally argue that Kotlin and Scala, as a JVM languages, have superior portability, then they could be considered overall winners with respect to P3.
 
 ## Future work
 
@@ -122,4 +122,4 @@ It should be relatively easy to add other benchmarks with a minor refactoring of
 
 We also plan to address the limitations listed above.
 
-Furthermore, we should include other performance metrics, especially heap memory usage.
+Furthermore, we are about to include other performance metrics, especially heap memory usage.
