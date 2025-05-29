@@ -89,7 +89,7 @@ We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core process
 
 ![Execution Time Chart](doc/images/aoc23d5.png)
 
-[*] We're currently reviewing the C# and OCaml versions to make sure we've used the language and library correctly and efficiently. Meanwhile these results should be considered preliminary/unconfirmed.
+[*] We're currently reviewing the C# and OCaml versions to make sure we've used each language and included library correctly and efficiently. Meanwhile these results should be considered preliminary/unconfirmed.
 
 ### Reproducing the benchmarks
 
