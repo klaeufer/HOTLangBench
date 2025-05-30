@@ -27,7 +27,7 @@ object Day5k {
             ;
             { i: Long ->
                 ranges
-                    .find { (_, s, l) -> (s until s + l).contains(i) } // more performant?
+                    .find { (_, s, l) -> i in (s until s + l) } // more performant?
 //                    .find { (_, s, l) -> s <= i && i < s + l } // 500 MB -> 3 GB over 30 sec
                     .let { if (it != null) it.first + i - it.second else i }
             }

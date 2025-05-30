@@ -28,7 +28,7 @@ public class Day5
         return lines.GetEnumerator();
     }
     
-    private static readonly Regex number = new Regex(@"(\d+)");
+    private static readonly Regex number = new Regex(@"(\d+)", RegexOptions.Compiled);
 
     static List<long> GetNumbersFromLine(string line)
     {
