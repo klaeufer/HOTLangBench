@@ -18,8 +18,8 @@ object Day5:
         .toSeq
 
       i => ranges
-//        .find((_, s, l) => (s until s + l).contains(i)) // faster?
-        .find((_, s, l) => s <= i && i < s + l) // slower?
+//        .find((_, s, l) => (s until s + l).contains(i)) // uses slow Seq.contains
+        .find((_, s, l) => s <= i && i < s + l) // considerably faster
         .map((b, s, _) => b + i - s)
         .getOrElse(i)
 
@@ -33,8 +33,8 @@ object Day5:
     val part1 = seeds.map(seedToLocation).min
     val part2 = seeds
       .sliding(2, 2).map: p =>
-//        (p.head until p.head + p.last)
-        Iterator.range(p.head, p.head + p.last)
+//        (p.head until p.head + p.last) // uses slow SeqView.Map
+        Iterator.range(p.head, p.head + p.last) // uses simple Iterator.map
           .map(seedToLocation)
           .min
       .min
