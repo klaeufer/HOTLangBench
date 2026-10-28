@@ -47,6 +47,7 @@ Currently, the following languages are supported:
 - Go
 - Haskell
 - Kotlin
+- Lean 4
 - Modern Java (24)
 - OCaml
 - Rust
@@ -57,7 +58,7 @@ I wrote the Scala version first, using function composition and other higher-ord
 
 I then manually transliterated the Scala version to Rust, Java, C#, and Kotlin.
 
-Recently, I used Anthropic Claude to transliterate the Scala version to C++, Go, Haskell, OCaml, and Swift, thereby covering most mainstream HOT languages.
+Recently, I used Anthropic Claude to transliterate the Scala version to C++, Go, Haskell, OCaml, and Swift, thereby covering most mainstream HOT languages. The Lean 4 version follows the same function-composition and brute-force seed-range approach.
 
 Help with missing languages is welcome, including:
 

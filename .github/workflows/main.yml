@@ -21,6 +21,10 @@ jobs:
         distribution: 'corretto'
         java-version: '24'
     - uses: actions/setup-go@v5
+    - uses: leanprover/lean-action@v1
+      with:
+        lake-package-directory: lean
+        build: false
     - name: Install remaining prerequisites
       run: ./scripts/install-prereqs.sh
     - name: Build executables
