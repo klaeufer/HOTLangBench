@@ -58,7 +58,7 @@ I wrote the Scala version first, using function composition and other higher-ord
 
 I then manually transliterated the Scala version to Rust, Java, C#, and Kotlin.
 
-Recently, I used Anthropic Claude to transliterate the Scala version to C++, Go, Haskell, OCaml, and Swift, thereby covering most mainstream HOT languages. The Lean 4 version follows the same function-composition and brute-force seed-range approach.
+Recently, I used Anthropic Claude to transliterate the Scala version to C++, Go, Haskell, OCaml, and Swift, thereby covering most mainstream HOT languages. I used Cline with GPT 6 to generate a Lean 4 version following the same function-composition and brute-force seed-range approach.
 
 Help with missing languages is welcome, including:
 
@@ -82,6 +82,7 @@ We ran the benchmarks on a compute server with two AMD EPYC 9354 32-core process
 | cpp      | 0:03:15   |
 | go       | 0:03:26   |
 | swift    | 0:05:18   |
+| lean.    | 0:08:47   |
 | kotlin   | 0:11:03   |
 | scala    | 0:13:00   |
 | haskell  | 0:28:13   |
