@@ -24,7 +24,7 @@ jobs:
     - uses: leanprover/lean-action@v1
       with:
         lake-package-directory: lean
-        build: false
+        auto-config: false
     - name: Install remaining prerequisites
       run: ./scripts/install-prereqs.sh
     - name: Build executables
